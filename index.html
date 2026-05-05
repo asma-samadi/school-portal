@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <ul>
+    <nav class="navbar">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <ul class="ul-navbar">
         <li><a href="index.html">Home</a></li>
         <li><a href="profile.html">Profile</a></li>
         <li><a href="courses.html">Courses</a></li>
@@ -18,7 +19,7 @@
     <main>
       <h1>Welcome to Bright Future School</h1>
 
-      <p>Student Enrollment / Registration</p>
+      <p class="info">Student Enrollment / Registration</p>
 
       <form action="">
         <input id="name-input" type="text" placeholder="Name" required />
@@ -28,6 +29,9 @@
       </form>
       <div id="result"></div>
     </main>
+    <footer class="footer">
+      <p>© 2026 Bright Future School. All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
