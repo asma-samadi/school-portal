@@ -42,7 +42,13 @@ enrollButton.addEventListener("click", function () {
 
   let editIndex = null;
 
-  if (student.name === "" || student.age === "" || student.grade === "") {
+  if (
+    student.name === "" ||
+    student.age === "" ||
+    isNaN(student.age) ||
+    student.grade === "" ||
+    student.grade > 12
+  ) {
     alert("Please fill the form correctly!");
   } else {
     // If edit mode
