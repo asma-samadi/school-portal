@@ -8,10 +8,11 @@ body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to right, #eef2f3, #dfe9f3);
 }
-
+/* Navbar style */
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0.5rem 3rem;
   background-color: #2980b9;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   align-items: center;
@@ -38,6 +39,10 @@ body {
   color: #555555;
 }
 
+.book-logo {
+  width: 4rem;
+}
+
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -47,9 +52,7 @@ body {
 
 @media (max-width: 768px) {
   .navbar {
-    display: flex;
-    justify-content: flex-end;
-    padding: 0rem 1rem;
+    padding: 0.5rem 1.5rem;
   }
 
   .ul-navbar {
@@ -86,8 +89,12 @@ body {
     display: block;
     margin: 0.5rem;
   }
-}
 
+  .book-logo {
+    width: 3rem;
+  }
+}
+/* Main style */
 h1 {
   text-align: center;
   margin: 40px 0;
@@ -159,6 +166,7 @@ form button:hover {
   transform: translateY(-2px);
 }
 
+/* Fotter style */
 .footer {
   text-align: center;
   padding: 20px;
@@ -179,6 +187,7 @@ form button:hover {
   }
 }
 
+/* div style */
 .result {
   max-width: 600px;
   margin: 40px auto;

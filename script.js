@@ -25,14 +25,14 @@ function displayStudents() {
         <p><strong>Name:</strong> ${student.name}</p>
         <p><strong>Age:</strong> ${student.age}</p>
         <p><strong>Grade:</strong> ${student.grade}</p>
-      </div>
+        <button class="delete-btn" data-index="${index}">Delete</button>
+        <button class="edit-btn" data-index="${index}">Edit</button>
+        </div>
     `;
   });
 }
 
-// show saved students on load
-displayStudents();
-
+// Check condition and Show the welcome message
 enrollButton.addEventListener("click", function () {
   let student = {
     name: name.value,
@@ -40,16 +40,50 @@ enrollButton.addEventListener("click", function () {
     grade: grade.value,
   };
 
+  let editIndex = null;
+
   if (student.name === "" || student.age === "" || student.grade === "") {
     alert("Please fill the form correctly!");
   } else {
-    students.push(student);
+    // If edit mode
+    if (editIndex !== null) {
+      students[editIndex] = student;
+      editIndex = null;
+    }
+    // If new student
+    else {
+      students.push(student);
+    }
+
+    localStorage.setItem("students", JSON.stringify(students));
+    displayStudents();
+
+    result.innerHTML = `Welcome ${student.name} to Bright Future School 🎉`;
+
+    name.value = "";
+    age.value = "";
+    grade.value = "";
+  }
+});
+
+allResult.addEventListener("click", function (e) {
+  if (e.target.classList.contains("delete-btn")) {
+    let index = e.target.dataset.index;
+    students.splice(index, 1);
     localStorage.setItem("students", JSON.stringify(students));
 
-    result.innerHTML = `
-      Welcome ${student.name} to Bright Future School <br><br>
-    `;
-
     displayStudents();
+  }
+
+  if (e.target.classList.contains("edit-btn")) {
+    let index = Number(e.target.dataset.index);
+
+    editIndex = index;
+
+    let student = students[index];
+
+    name.value = student.name;
+    age.value = student.age;
+    grade.value = student.grade;
   }
 });
