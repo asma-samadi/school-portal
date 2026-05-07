@@ -52,14 +52,20 @@ window.onload = function () {
 let showEmail = document.querySelector("#show-email");
 let showPhone = document.querySelector("#show-phone");
 let hideContact = document.querySelector("#hide-info");
-let contact = document.querySelector("#contact-info");
+let contactEmail = document.querySelector("#contact-info-email");
+let contactPhone = document.querySelector("#contact-info-phone");
 function contactDetails() {
   showEmail.addEventListener("click", function () {
-    contact.innerHTML = `<h2>Email: ${info.email}</h2>`;
+    contactEmail.innerHTML = `<h2>Email: ${info.email}</h2>`;
   });
 
   showPhone.addEventListener("click", function () {
-    contact.innerHTML = `<h2>Phone number: ${info.phone}</h2>`;
+    contactPhone.innerHTML = `<h2>Phone number: ${info.phone}</h2>`;
+  });
+
+  hideContact.addEventListener("click", function () {
+    contactEmail.textContent = "";
+    contactPhone.textContent = "";
   });
 }
 
