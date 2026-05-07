@@ -22,29 +22,25 @@
     </nav>
 
     <!-- main -->
-    <main class="user-info">
-      <img src="" alt="" />
-      <h2>Name</h2>
-      <h2>Age</h2>
-      <h2>Grade</h2>
-      <h2>Status</h2>
-    </main>
+    <main id="user-info" class="user-info"></main>
 
     <!-- Section contact -->
     <section class="user-contact">
-      <button class="show-email">Show Email</button>
-      <button class="show-phone">Show Phone</button>
-      <button class="hide-info">Hide Contact Info</button>
+      <button class="show-email" id="show-email">Show Email</button>
+      <button class="show-phone" id="show-phone">Show Phone</button>
+      <button class="hide-info" id="hide-info">Hide Contact Info</button>
+      <div id="contact-info"></div>
     </section>
 
     <!-- Section status -->
     <section class="user-status">
       <form>
         <input
+          id="status-input"
           type="text"
           placeholder="Enter new status (Active / Suspended)"
         />
-        <button>Update</button>
+        <button id="updatestatus-input">Update</button>
       </form>
     </section>
 
