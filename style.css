@@ -233,3 +233,35 @@ form button:hover {
   margin-bottom: 10px;
   color: #2980b9;
 }
+
+.student-card .delete-btn {
+  padding: 10px 15px;
+  text-align: center;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2980b9, #6dd5fa);
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.student-card .edit-btn {
+  padding: 10px 15px;
+  text-align: center;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2980b9, #6dd5fa);
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
