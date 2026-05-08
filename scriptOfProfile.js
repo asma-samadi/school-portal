@@ -38,13 +38,17 @@ let info = studentInfo[randomIndex];
 // run after page loads
 window.onload = function () {
   container.innerHTML = `
-    <img src="${info.photo}" width="120" style="border-radius:50%" />
-    <h2>${info.name}</h2>
-    <p>Age: ${info.age}</p>
-    <p>Grade: ${info.grade}</p>
-    <p>Email: ${info.email}</p>
-    <p>Phone: ${info.phone}</p>
-    <p id="status-element">Status: ${info.status}</p>
+  <div class='profile-info-div'>
+  <div>
+      <h1>${info.name}</h1>
+      <p>Age: ${info.age}</p>
+      <p>Grade: ${info.grade}</p>
+      <p>Email: ${info.email}</p>
+      <p>Phone: ${info.phone}</p>
+      <p id="status-element">Status: ${info.status}</p>
+    </div>
+    <img src="${info.photo}"/>
+  </div>
 `;
 };
 
@@ -56,11 +60,11 @@ let contactEmail = document.querySelector("#contact-info-email");
 let contactPhone = document.querySelector("#contact-info-phone");
 function contactDetails() {
   showEmail.addEventListener("click", function () {
-    contactEmail.innerHTML = `<h2>Email: ${info.email}</h2>`;
+    contactEmail.innerHTML = `<h3>Email: ${info.email}</h3>`;
   });
 
   showPhone.addEventListener("click", function () {
-    contactPhone.innerHTML = `<h2>Phone number: ${info.phone}</h2>`;
+    contactPhone.innerHTML = `<h3>Phone number: ${info.phone}</h3>`;
   });
 
   hideContact.addEventListener("click", function () {
@@ -77,12 +81,20 @@ let updateStatusInput = document.querySelector("#updatestatus-input");
 
 updateStatusInput.addEventListener("click", function (event) {
   event.preventDefault();
+
   let statusElement = document.querySelector("#status-element");
   let valueStatus = statusInput.value.trim().toLowerCase();
 
   if (valueStatus === "active" || valueStatus === "suspended") {
     let change = valueStatus.charAt(0).toUpperCase() + valueStatus.slice(1);
+
     statusElement.textContent = `Status: ${change}`;
+
+    if (change === "Active") {
+      statusElement.style.color = "green";
+    } else {
+      statusElement.style.color = "red";
+    }
   } else {
     alert("Please write Active or Suspended");
   }

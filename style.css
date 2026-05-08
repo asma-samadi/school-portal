@@ -265,3 +265,131 @@ form button:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
+
+/* Profile information main */
+.profile-info-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  margin: 1rem 8rem;
+}
+
+.profile-info-div img {
+  width: 20rem;
+  height: 25rem;
+  border-radius: 50%;
+}
+
+.profile-info-div h1 {
+  color: #2980b9;
+  font-weight: 800;
+  font-size: 4rem;
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.profile-info-div p {
+  font-weight: 800;
+  font-size: 1rem;
+  margin-left: 2rem;
+}
+
+@media (max-width: 768px) {
+  .profile-info-div {
+    display: block;
+    padding: 0rem;
+    margin: 1rem 1rem;
+  }
+
+  .profile-info-div img {
+    display: block;
+    margin: 0 auto;
+    font-weight: 200;
+    width: 10rem;
+    height: 15rem;
+    margin-top: 3rem;
+  }
+
+  .profile-info-div h1 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 3rem;
+    margin-top: 2rem;
+  }
+
+  .profile-info-div p {
+    text-align: center;
+    font-weight: 800;
+    font-size: 0.8rem;
+    line-height: 0.7rem;
+  }
+}
+
+/* Profile contact information section */
+.user-contact-profile {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-contact-info h2 {
+  color: #2980b9;
+  text-align: center;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.user-contact-profile button {
+  margin: 4rem;
+  background: linear-gradient(135deg, #2980b9, #6dd5fa);
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+}
+
+.profile-contact-info {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  margin: 7rem 0rem;
+}
+.user-contact-profile button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.user-contact-profile .contact-phone-email {
+  display: block;
+  margin-top: 2rem;
+}
+
+.user-contact-profile .contact-info-email {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.user-contact-profile .contact-info-phone {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .user-contact-profile {
+    display: block;
+  }
+  .profile-contact-info h2 {
+    font-size: 2rem;
+  }
+
+  .user-contact-profile button {
+    display: block;
+    margin: 2rem auto;
+    background: linear-gradient(135deg, #2980b9, #6dd5fa);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+  }
+}
