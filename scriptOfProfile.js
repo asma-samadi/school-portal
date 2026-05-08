@@ -44,7 +44,7 @@ window.onload = function () {
     <p>Grade: ${info.grade}</p>
     <p>Email: ${info.email}</p>
     <p>Phone: ${info.phone}</p>
-    <p>Status: ${info.status}</p>
+    <p id="status-element">Status: ${info.status}</p>
 `;
 };
 
@@ -70,3 +70,20 @@ function contactDetails() {
 }
 
 contactDetails();
+
+// Status
+let statusInput = document.querySelector("#status-input");
+let updateStatusInput = document.querySelector("#updatestatus-input");
+
+updateStatusInput.addEventListener("click", function (event) {
+  event.preventDefault();
+  let statusElement = document.querySelector("#status-element");
+  let valueStatus = statusInput.value.trim().toLowerCase();
+
+  if (valueStatus === "active" || valueStatus === "suspended") {
+    let change = valueStatus.charAt(0).toUpperCase() + valueStatus.slice(1);
+    statusElement.textContent = `Status: ${change}`;
+  } else {
+    alert("Please write Active or Suspended");
+  }
+});
