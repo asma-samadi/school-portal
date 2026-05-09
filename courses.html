@@ -7,14 +7,74 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <ul>
+    <nav class="navbar">
+      <img class="book-logo" src="images/book-logo.svg" alt="logo" />
+
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <ul class="ul-navbar">
         <li><a href="index.html">Home</a></li>
         <li><a href="profile.html">Profile</a></li>
         <li><a href="courses.html">Courses</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <script src="script.js"></script>
+
+    <!-- Courses  -->
+    <main id="show-courses"></main>
+
+    <!-- Course detail -->
+    <section id="show-detail-course"></section>
+
+    <!-- Course from -->
+    <section id="course-form">
+      <form action="">
+        <input
+          id="enter-course-name"
+          type="text"
+          placeholder="Enter the course name"
+        />
+        <input
+          id="enter-instructor-name"
+          type="text"
+          placeholder="Enter the instructor name"
+        />
+        <input id="enter-grade" type="text" placeholder="Enter the grade" />
+        <input
+          id="enter-image"
+          type="text"
+          placeholder="Enter the URL of image"
+        />
+        <input
+          id="enter-description"
+          type="text"
+          placeholder="Enter the description"
+        />
+        <button id="submit-new-info">Submit</button>
+      </form>
+    </section>
+
+    <!-- Filter section -->
+    <section id="filter-section">
+      <button data-grade="All">All courses</button>
+      <button data-grade="1">Grade 1</button>
+      <button data-grade="2">Grade 2</button>
+      <button data-grade="3">Grade 3</button>
+      <button data-grade="4">Grade 4</button>
+      <button data-grade="5">Grade 5</button>
+      <button data-grade="6">Grade 6</button>
+      <button data-grade="7">Grade 7</button>
+      <button data-grade="8">Grade 8</button>
+      <button data-grade="9">Grade 9</button>
+      <button data-grade="10">Grade 10</button>
+      <button data-grade="11">Grade 11</button>
+      <button data-grade="12">Grade 12</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2026 Bright Future School. All rights reserved.</p>
+    </footer>
+    <script src="scriptOfCourses.js"></script>
   </body>
 </html>
