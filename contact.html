@@ -7,14 +7,47 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <ul>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <img class="book-logo" src="images/book-logo.svg" alt="logo" />
+
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <ul class="ul-navbar">
         <li><a href="index.html">Home</a></li>
         <li><a href="profile.html">Profile</a></li>
         <li><a href="courses.html">Courses</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-    <script src="script.js"></script>
+
+    <!-- Contact form -->
+    <main>
+      <h1 class="h1-contact">Contact Form</h1>
+      <form action="">
+        <input
+          id="name-for-contact"
+          type="text"
+          placeholder="Enter your name"
+        />
+        <input
+          id="email-for-contact"
+          type="text"
+          placeholder="Enter your email"
+        />
+        <input
+          id="message-for-contact"
+          type="text"
+          placeholder="Enter your message"
+        />
+        <button id="send-info">Send</button>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2026 Bright Future School. All rights reserved.</p>
+    </footer>
+    <script src="scriptOfContact.js"></script>
   </body>
 </html>

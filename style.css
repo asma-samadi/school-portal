@@ -174,6 +174,7 @@ form button:hover {
   color: white;
   margin-top: 50px;
   font-size: 0.9rem;
+  margin-bottom: 0%;
 }
 
 .footer p {
@@ -184,6 +185,10 @@ form button:hover {
 @media (max-width: 768px) {
   form {
     max-width: 300px;
+  }
+
+  .footer {
+    margin-bottom: 0%;
   }
 }
 
@@ -511,4 +516,23 @@ form button:hover {
 
 #filter-section button:active {
   transform: scale(0.96);
+}
+
+/* Style of h1 of contact page */
+.h1-contact {
+  color: #2980b9;
+  font-weight: 800;
+  font-size: 3rem;
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .h1-contact {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
 }
